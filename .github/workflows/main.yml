@@ -18,7 +18,7 @@
           run: docker login --username ${{ secrets.DOCKER_USERN }} --password ${{ secrets.DOCKER_TOKEN }}
 
         - name: "Building docker image"
-          run: docker build -t ${{ secrets.DOCKER_USERN }}/docker11 .
+          run: docker build -t ${{ secrets.DOCKER_USERN }}/nun .
 
         - name: "pushing"
-          run: docker push ${{ secrets.DOCKER_USERN }}/docker11
+          run: docker push ${{ secrets.DOCKER_USERN }}/nun
