@@ -15,10 +15,10 @@
         - uses: actions/checkout@v3
 
         - name: "Login to Docker hub"
-          run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
+          run: docker login --username ${{ secrets.DOCKER_USERN }} --password ${{ secrets.DOCKER_TOKEN }}
 
         - name: "Building docker image"
-          run: docker build -t ${{ secrets.DOCKER_USERNAME }}/docker11 .
+          run: docker build -t ${{ secrets.DOCKER_USERN }}/docker11 .
 
         - name: "pushing"
-          run: docker push ${{ secrets.DOCKER_USERNAME }}/docker11
+          run: docker push ${{ secrets.DOCKER_USERN }}/docker11
